@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Gajanan Tours and Travels - Premium & Vibrant Travel Agency, Bhiwandi</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fffcf2',
+              100: '#fef3c7',
+              200: '#fde68a',
+              500: '#ff7300', // Vibrant Indian Saffron / Amber Orange
+              600: '#e05300',
+              700: '#b83b00',
+              800: '#8c2600',
+              900: '#4a0e00',
+            },
+            primary: {
+              50: '#fffbf4',   // Warm soft ivory/cream (No green!)
+              100: '#fdf3e7',  // Soft bone/linen
+              55: '#fef9c3',   // Soft yellow fallback
+              500: '#8c5a3c',  // Deep rich espresso brown
+              600: '#75472e',  // Premium dark sandalwood/brown
+              700: '#5c351f',  // Solid deep teak brown
+              900: '#3e2010',  // Deep forest espresso brown
+              950: '#231107',  // Luxurious midnight rich cocoa
+            },
+            charcoal: {
+              50: '#faf8f5',   // Soft sand-tinted warm base
+              900: '#1e140e',  // Botanical dark coffee charcoal
+              950: '#110a06',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow-gold': '0 0 20px rgba(255, 115, 0, 0.45)',
+            'glow-brown': '0 0 20px rgba(140, 90, 60, 0.45)',
+            'glass': 'inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 10px 30px rgba(0, 0, 0, 0.1)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+    .blur-glass {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .blur-glass-dark {
+      background: rgba(30, 20, 13, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .card-zoom:hover .card-img {
+      transform: scale(1.08);
+    }
+    .transition-custom {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    /* Vibrant animated backgrounds */
+    .bg-gradient-vibrant {
+      background: linear-gradient(135deg, #ff7300 0%, #eab308 50%, #8c5a3c 100%);
+    }
+    .bg-gradient-soft {
+      background: linear-gradient(135deg, #fffcf2 0%, #fef8ee 50%, #faf3e5 100%);
+    }
+    .text-vibrant-gradient {
+      background: linear-gradient(135deg, #ff7300 0%, #eab308 50%, #8c5a3c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-soft text-charcoal-900 overflow-x-hidden min-h-screen">
+
+  <!-- ==================== HEADER / FLOATING NAVBAR ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between blur-glass border border-white/60 shadow-glass rounded-2xl px-5 sm:px-8 py-3.5 transition-all duration-300" id="navbar-container">
+      
+      <!-- Logo Branding -->
+      <a href="#home" class="flex items-center gap-3 group focus:outline-none">
+        <div class="h-11 w-11 rounded-xl bg-gradient-to-tr from-brand-500 via-yellow-500 to-primary-500 text-white flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-custom">
+          <!-- Auspicious design token -->
+          <i class="fa-solid fa-om text-xl animate-pulse" title="Shree Gajanan Blessings Logo"></i>
+        </div>
+        <div>
+          <span id="brand-name" class="block text-lg sm:text-xl font-extrabold font-display tracking-tight text-slate-900 group-hover:text-brand-500 transition-colors leading-none">
+            Shree Gajanan
+          </span>
+          <span class="block text-[11px] tracking-widest font-extrabold uppercase text-brand-600 font-sans leading-none mt-1">
+            Tours & Travels
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#home" class="text-sm font-bold text-slate-700 hover:text-brand-500 transition-colors">Home</a>
+        <a href="#services" class="text-sm font-bold text-slate-700 hover:text-brand-500 transition-colors">Services</a>
+        <a href="#next-trips" class="text-sm font-bold text-slate-700 hover:text-brand-500 transition-colors">Next Trips</a>
+        <a href="#about" class="text-sm font-bold text-slate-700 hover:text-brand-500 transition-colors">About Us</a>
+        <a href="#reviews" class="text-sm font-bold text-slate-700 hover:text-brand-500 transition-colors">Reviews</a>
+        <a href="#contact" class="text-sm font-bold text-slate-700 hover:text-brand-500 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Navbar Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Phone Booking button -->
+        <a href="tel:918983000000" class="relative inline-flex items-center justify-center text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-brand-500 to-primary-600 hover:from-brand-600 hover:to-primary-700 hover:shadow-glow-brown transition-all duration-350 px-4 py-2.5 rounded-xl shadow-md gap-2 group">
+          <i class="fa-solid fa-phone-volume text-sm animate-bounce group-hover:animate-none"></i>
+          <span class="hidden lg:inline text-white/90">Instantly Dial:</span>
+          <span>8983X-XXXXX</span>
+        </a>
+
+        <!-- Mobile hamburger menu button -->
+        <button id="mobile-menu-btn" class="inline-flex md:hidden text-slate-700 focus:outline-none focus:text-slate-900 p-1.5 rounded-lg hover:bg-slate-100" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer menu -->
+    <div id="mobile-drawer" class="hidden md:hidden mt-2 max-w-7xl mx-auto blur-glass border border-white/50 shadow-xl rounded-2xl p-6 transition-all duration-300">
+      <nav class="flex flex-col gap-4">
+        <a href="#home" class="mobile-link text-sm font-bold text-slate-800 hover:text-brand-500">Home</a>
+        <a href="#services" class="mobile-link text-sm font-bold text-slate-800 hover:text-brand-500 border-t border-slate-200/50 pt-2.5">Services</a>
+        <a href="#next-trips" class="mobile-link text-sm font-bold text-slate-800 hover:text-brand-500 border-t border-slate-200/50 pt-2.5">Next Trips</a>
+        <a href="#about" class="mobile-link text-sm font-bold text-slate-800 hover:text-brand-500 border-t border-slate-200/50 pt-2.5">About Us</a>
+        <a href="#reviews" class="mobile-link text-sm font-bold text-slate-800 hover:text-brand-500 border-t border-slate-200/50 pt-2.5">Reviews</a>
+        <a href="#contact" class="mobile-link text-sm font-bold text-slate-800 hover:text-brand-500 border-t border-slate-200/50 pt-2.5">Contact Us</a>
+        
+        <div class="mt-4 pt-4 border-t border-slate-200">
+          <p class="text-[11px] font-extrabold text-brand-600 uppercase tracking-widest mb-2">Bhiwandi Office Base</p>
+          <p class="text-xs text-slate-600 font-medium">Shop No. 4, Ground Floor, Gajanan Heritage, Kalyan Road, Opp. Sai Baba Temple, Bhiwandi, Maharashtra - 421302</p>
+          <div class="flex gap-4 mt-4">
+            <a href="#" class="h-9 w-9 rounded-lg bg-yellow-100 text-brand-600 flex items-center justify-center text-sm hover:bg-brand-500 hover:text-white transition-colors">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/918983000000" class="h-9 w-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm hover:bg-emerald-500 hover:text-white transition-colors">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#" class="h-9 w-9 rounded-lg bg-yellow-50 text-yellow-600 flex items-center justify-center text-sm hover:bg-yellow-500 hover:text-white transition-colors">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="home" class="relative min-h-screen flex flex-col justify-center items-center pt-28 pb-16 px-4 overflow-hidden">
+    <!-- Background Banner Image with Dark Rich Overlay for Perfect Contrast -->
+    <div class="absolute inset-0 bg-primary-900">
+      <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover object-center opacity-45 mix-blend-color-dodge" alt="Vibrant travel destination background">
+      <div class="absolute inset-0 bg-gradient-to-b from-primary-900/90 via-primary-900/40 to-slate-50"></div>
+    </div>
+
+    <!-- Glowing Background blobs for Vibrancy! -->
+    <div class="absolute top-1/4 left-1/4 w-80 h-80 bg-brand-500/30 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary-500/30 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <!-- Hero Content Base -->
+    <div class="relative z-10 max-w-5xl mx-auto text-center px-4 sm:px-6 mt-8 sm:mt-12 flex flex-col items-center">
+      <span class="inline-flex items-center gap-2 bg-brand-500 text-white text-xs font-bold uppercase tracking-wider px-5 py-2 rounded-full mb-6 font-display shadow-lg shadow-brand-500/20 backdrop-blur-md">
+        <i class="fa-solid fa-om text-white animate-spin" style="animation-duration: 8s;"></i> Shree Saint Gajanan Maharaj Blessings — Trusted Travel Partner
+      </span>
+      
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold font-display text-white tracking-tight leading-[1.12] mb-6">
+        Explore Beautiful Destinations with<br class="hidden sm:inline"> 
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-yellow-400 to-primary-500">
+          Shree Gajanan Premium Tours
+        </span>
+      </h1>
+      
+      <p class="text-slate-200 text-base sm:text-lg md:text-xl max-w-3xl font-light leading-relaxed mb-8">
+        Bhiwandi's premier travel architect. Indulge in magnificent group holidays, spiritual pilgrimages, luxury hotel stays, and specialized deluxe fleet rentals at transparent flat pricing.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-md">
+        <a href="#services" class="w-full sm:w-auto text-center px-8 py-4 bg-gradient-to-r from-brand-500 to-primary-600 hover:from-brand-600 hover:to-primary-700 text-white font-extrabold uppercase tracking-widest text-xs rounded-xl shadow-lg shadow-brand-500/30 hover:shadow-glow-brown transition-custom flex items-center justify-center gap-2">
+          Explore Packages <i class="fa-solid fa-chevron-right text-xs"></i>
+        </a>
+        <a href="#contact" class="w-full sm:w-auto text-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md font-extrabold uppercase tracking-widest text-xs rounded-xl hover:border-brand-500 transition-custom flex items-center justify-center gap-2">
+          Plan Custom Trip <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Dynamic Destination Booking Widget -->
+    <div class="relative z-10 w-full max-w-5xl mx-auto px-4 mt-16">
+      <div class="bg-white/95 backdrop-blur-2xl border-2 border-brand-200 p-5 sm:p-7 rounded-3xl shadow-2xl shadow-brand-500/10 flex flex-col lg:flex-row gap-5 items-end">
+        <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+          
+          <div>
+            <label class="block text-xs font-extrabold text-brand-600 uppercase tracking-widest mb-1.5 ml-1 flex items-center gap-1.5 matches">
+              <i class="fa-solid fa-globe text-brand-500"></i> Destination Interest
+            </label>
+            <div class="relative">
+              <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-500"><i class="fa-solid fa-map-location-dot"></i></span>
+              <select id="quick-dest" class="w-full bg-brand-50/50 border border-brand-200/85 rounded-xl py-3 pl-10 pr-3 text-sm text-slate-800 font-extrabold focus:outline-none focus:border-brand-500 appearance-none">
+                <option value="heritage">Deccan Flora & Heritage Caves</option>
+                <option value="coastal">Konkan Beachfront Getaway</option>
+                <option value="hills">Western Ghats Misty Retreat</option>
+                <option value="custom">Other Custom Location</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-extrabold text-brand-600 uppercase tracking-widest mb-1.5 ml-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-tags text-brand-500"></i> Service Category
+            </label>
+            <div class="relative">
+              <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-500"><i class="fa-solid fa-car"></i></span>
+              <select id="quick-interest" class="w-full bg-brand-50/50 border border-brand-200/85 rounded-xl py-3 pl-10 pr-3 text-sm text-slate-800 font-extrabold focus:outline-none focus:border-brand-500 appearance-none">
+                <option value="package">Complete Holiday Packages</option>
+                <option value="car">Car & Sedan Rental Hire</option>
+                <option value="bus">Luxury Bus / Bus Tours</option>
+                <option value="hospitality">Accommodations & Hotels</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-extrabold text-brand-600 uppercase tracking-widest mb-1.5 ml-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-calendar text-brand-500"></i> Ideal Travel Date
+            </label>
+            <div class="relative">
+              <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-500"><i class="fa-solid fa-calendar-day"></i></span>
+              <input type="date" id="quick-date" value="2026-06-25" class="w-full bg-brand-50/50 border border-brand-200/85 rounded-xl py-2.5 pl-10 pr-3 text-sm text-slate-800 font-extrabold focus:outline-none focus:border-brand-500">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="w-full lg:w-auto">
+          <button onclick="triggerQuickIntention()" class="w-full lg:w-auto px-8 py-3.5 bg-gradient-to-r from-primary-600 to-brand-500 text-white font-extrabold hover:from-primary-700 hover:to-brand-600 hover:text-white hover:shadow-glow-brown transition-custom rounded-xl flex items-center justify-center gap-2 cursor-pointer text-sm uppercase tracking-widest shadow-md">
+            <i class="fa-solid fa-paper-plane text-xs animate-pulse"></i> Travel Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== GROUPED DIRECTORY OF SERVICES ==================== -->
+  <section id="services" class="py-24 px-4 bg-white relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-orange-50/20 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-[0.25em] text-brand-600 bg-brand-100/60 px-4 py-1.5 rounded-full inline-block mb-3 font-display">Specialized Portfolios</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display tracking-tight mb-4 text-slate-900">
+          Our Handcrafted Services & Rentals
+        </h2>
+        <p class="text-slate-600 font-medium leading-relaxed">
+          We organize our extensive list of travel dispatches into simplified, high-vibrancy filterable blocks. Switch between directories to explore options.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs with Vibrant styling -->
+      <div class="flex flex-wrap justify-center gap-3 border-b-2 border-brand-100 pb-1 max-w-5xl mx-auto mb-12">
+        <button onclick="switchCategoryTab('custom-holidays')" id="tab-btn-custom-holidays" class="tab-btn transition-custom px-6 py-4 text-sm font-bold border-b-4 font-display flex items-center gap-2 cursor-pointer focus:outline-none text-brand-600 border-brand-500 bg-brand-100/40 rounded-t-xl shadow-sm">
+          <i class="fa-solid fa-umbrella-beach text-brand-500"></i> Custom Holidays
+        </button>
+        <button onclick="switchCategoryTab('group-tours')" id="tab-btn-group-tours" class="tab-btn transition-custom px-6 py-4 text-sm font-bold border-b-4 font-display flex items-center gap-2 cursor-pointer focus:outline-none text-slate-400 border-transparent hover:text-slate-700 hover:border-slate-300">
+          <i class="fa-solid fa-route text-primary-500"></i> Group & City Tours
+        </button>
+        <button onclick="switchCategoryTab('fleet-rentals')" id="tab-btn-fleet-rentals" class="tab-btn transition-custom px-6 py-4 text-sm font-bold border-b-4 font-display flex items-center gap-2 cursor-pointer focus:outline-none text-slate-400 border-transparent hover:text-slate-700 hover:border-slate-300">
+          <i class="fa-solid fa-car text-brand-500"></i> Fleet & Rentals
+        </button>
+        <button onclick="switchCategoryTab('hospitality-essentials')" id="tab-btn-hospitality-essentials" class="tab-btn transition-custom px-6 py-4 text-sm font-bold border-b-4 font-display flex items-center gap-2 cursor-pointer focus:outline-none text-slate-400 border-transparent hover:text-slate-700 hover:border-slate-300">
+          <i class="fa-solid fa-concierge-bell text-yellow-500"></i> Hospitality Essentials
+        </button>
+      </div>
+
+      <!-- Tab Content Space -->
+      <div class="max-w-5xl mx-auto">
+        <!-- Custom Holidays Block -->
+        <div id="tab-content-custom-holidays" class="tab-content block transition-all duration-300">
+          <div class="p-5 bg-gradient-to-r from-brand-500/10 via-yellow-500/10 to-primary-500/10 border-2 border-brand-200/60 rounded-3xl mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+            <p class="text-sm text-slate-800 font-extrabold flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-brand-500"></i> Handcrafted personal getaways suited for your ideal style & pace.
+            </p>
+            <a href="#contact" class="px-6 py-3 text-xs font-extrabold uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white rounded-xl shadow-md cursor-pointer">Plan Custom Retreat <i class="fa-solid fa-chevron-right ml-1"></i></a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-brand-50/50 p-6 rounded-2xl border-2 border-brand-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-orange-100 text-brand-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-heart text-lg"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Honeymooms</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Absolute romantic escape layouts equipped with ocean-facing boutique resorts, premium dining, and private photography walks.</p>
+              </div>
+            </div>
+
+            <div class="bg-brand-50/50 p-6 rounded-2xl border-2 border-brand-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-yellow-105 text-yellow-750 rounded-xl flex items-center justify-center shrink-0 shadow-sm bg-yellow-105"><i class="fa-solid fa-user-friends text-lg text-yellow-600"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Couples Retreats</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Relaxing dual vacations designed for cozy vibes, scenic misty viewpoints, and historical heritage walks.</p>
+              </div>
+            </div>
+
+            <div class="bg-brand-50/50 p-6 rounded-2xl border-2 border-brand-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-users text-lg"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Family Trips</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Safe and secure traditional group vacations featuring clean vegetarian kitchens, child-friendly parks, and elder-friendly stays.</p>
+              </div>
+            </div>
+
+            <div class="bg-brand-50/50 p-6 rounded-2xl border-2 border-brand-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-yellow-100 text-yellow-700 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-graduation-cap text-lg"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Educational Field Tours</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Highly instructional science and history field trips engineered for schools, universities, or local training colleges with absolute logistical backup.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Group & City Tours Block -->
+        <div id="tab-content-group-tours" class="tab-content hidden transition-all duration-300">
+          <div class="p-5 bg-gradient-to-r from-brand-500/10 via-yellow-500/10 to-primary-500/10 border-2 border-brand-200/60 rounded-3xl mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+            <p class="text-sm text-slate-800 font-extrabold flex items-center gap-2">
+              <i class="fa-solid fa-compass text-primary-500 animate-spin" style="animation-duration: 10s"></i> Vibrant, pre-planned itineraries to explore cities with community or friends.
+            </p>
+            <a href="#contact" class="px-6 py-3 text-xs font-extrabold uppercase tracking-wider bg-primary-500 hover:bg-primary-600 text-white rounded-xl shadow-md cursor-pointer">Join Next Departure <i class="fa-solid fa-bus ml-1"></i></a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-primary-50/50 p-6 rounded-2xl border-2 border-primary-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-brand-100 text-brand-700 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-people-group text-lg"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Premium Family Tours</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Fixed-group departures perfect for exploring auspicious temples, heritage sites, and premium monuments with local Marathi speaking guides.</p>
+              </div>
+            </div>
+
+            <div class="bg-primary-50/50 p-6 rounded-2xl border-2 border-primary-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-bus text-lg"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Highway Bus Tours</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Relaxing highways and scenic coastal cruises inside premium air-conditioned luxury pushback coaches with absolute speed controls.</p>
+              </div>
+            </div>
+
+            <div class="bg-primary-50/50 p-6 rounded-2xl border-2 border-primary-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-yellow-100 text-yellow-700 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-city text-lg"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Historical City Exploring</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">One-day or weekend city driving packages covering major central markets, sacred shrines, and scenic viewpoints safely.</p>
+              </div>
+            </div>
+
+            <div class="bg-primary-50/50 p-6 rounded-2xl border-2 border-primary-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-location-crosshairs text-lg"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Divine Local Pilgrimages</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Tailor-made auspicious temple drives, including Gajanan Maharaj Shegaon visits, equipped with special entry assistance.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Fleet & Rentals Block -->
+        <div id="tab-content-fleet-rentals" class="tab-content hidden transition-all duration-300">
+          <div class="p-5 bg-gradient-to-r from-brand-500/10 via-yellow-500/10 to-primary-500/10 border-2 border-brand-200/60 rounded-3xl mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+            <p class="text-sm text-slate-800 font-extrabold flex items-center gap-2">
+              <i class="fa-solid fa-car-rear text-brand-500"></i> Sanitized executive sedans and heavy coaches on instant dial booking.
+            </p>
+            <a href="tel:918983000000" class="px-6 py-3 text-xs font-extrabold uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white rounded-xl shadow-md cursor-pointer">Hire Rental Fleet Now <i class="fa-solid fa-phone ml-1"></i></a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-amber-50/40 p-6 rounded-2xl border-2 border-brand-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-yellow-105 text-yellow-750 rounded-xl flex items-center justify-center shrink-0 shadow-sm bg-yellow-100"><i class="fa-solid fa-car-side text-lg text-brand-600"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Chauffeur Car Hire</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Clean, vacuum-sanitized passenger cars. Includes spacious modern sedans and solid mid-size SUVs matching family layouts.</p>
+              </div>
+            </div>
+
+            <div class="bg-amber-50/40 p-6 rounded-2xl border-2 border-brand-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-primary-105 text-primary-750 rounded-xl flex items-center justify-center shrink-0 shadow-sm bg-primary-100"><i class="fa-solid fa-van-shuttle text-lg text-primary-600"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Luxury Tempo Travellers & Buses</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Spacious Multi-Axle Volvo luxury buses, mini coaches and 17-seater deluxe tempo travellers for wedding transport operations.</p>
+              </div>
+            </div>
+
+            <div class="bg-amber-50/40 p-6 rounded-2xl border-2 border-brand-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-yellow-100 text-yellow-700 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-clipboard-list text-lg text-yellow-600"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Employee Corporate Duty</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Punctual and professional staff transit system catering to Bhiwandi logistics corridors, warehouses and manufacturing hubs.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Hospitality Essentials Block -->
+        <div id="tab-content-hospitality-essentials" class="tab-content hidden transition-all duration-300">
+          <div class="p-5 bg-gradient-to-r from-brand-500/10 via-yellow-500/10 to-primary-500/10 border-2 border-brand-200/60 rounded-3xl mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+            <p class="text-sm text-slate-800 font-extrabold flex items-center gap-2">
+              <i class="fa-solid fa-concierge-bell text-yellow-500"></i> Logistical support to secure star hotels and tour guidance stress-free.
+            </p>
+            <a href="tel:918983000000" class="px-6 py-3 text-xs font-extrabold uppercase tracking-wider bg-brand-500 hover:bg-brand-600 text-white rounded-xl shadow-md cursor-pointer">Quick Support HotLine <i class="fa-solid fa-headset ml-1"></i></a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-yellow-50/40 p-6 rounded-2xl border-2 border-yellow-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-yellow-100 text-yellow-650 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-hotel text-lg text-yellow-650"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Accommodations Booking</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Exclusive room tariffs in verified premium resorts, homestays, and boutique hotels matching traditional dietary restrictions.</p>
+              </div>
+            </div>
+
+            <div class="bg-primary-50/40 p-6 rounded-2xl border-2 border-primary-100 flex gap-4 group hover:bg-white hover:border-brand-500 hover:shadow-lg transition-custom">
+              <div class="h-12 w-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-passport text-lg"></i></div>
+              <div>
+                <h4 class="font-extrabold text-slate-900 group-hover:text-brand-500">Visa & Tour Guides</h4>
+                <p class="text-xs text-slate-650 mt-1.5 font-medium leading-relaxed">Fast-tracked document preparation, visa submission filing, and English/Hindi/Marathi guide booking on requested locations.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ==================== TOUR PACKAGES CARDS ==================== -->
+  <section id="next-trips" class="py-24 px-4 bg-orange-50/30 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-white via-orange-50/10 to-primary-50/25 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-[0.25em] text-white bg-gradient-to-r from-brand-500 to-primary-500 px-4 py-1.5 rounded-full inline-block mb-3 font-display">Special Offers</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight mb-4">
+          Visualizing Your Next Escape routes
+        </h2>
+        <p class="text-slate-650 font-medium leading-relaxed">
+          Unlock pre-packaged departures directly designed for Bhiwandi travelers, customized stays, and transparent local rates.
+        </p>
+      </div>
+
+      <!-- Packages Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        
+        <!-- Package Card 1 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border-2 border-brand-100 hover:border-brand-500 flex flex-col h-full card-zoom transition-custom">
+          <div class="relative h-56 overflow-hidden bg-slate-100">
+            <span class="absolute top-4 left-4 z-10 text-[10px] font-extrabold uppercase tracking-widest text-slate-950 bg-brand-500 px-3 py-1.5 rounded-md shadow">Western India Tour</span>
+            <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover card-img transition-all duration-500" alt="Deccan Kaas Flower Plateau and Heritage">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white text-left">
+              <p class="text-[10px] tracking-widest uppercase font-extrabold text-brand-300"><i class="fa-solid fa-location-dot"></i> Satara & Aurangabad, Maharashtra</p>
+              <h3 class="text-lg font-extrabold font-display text-white">Deccan Flora & Caves Tour</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between text-left">
+            <div>
+              <p class="text-xs text-slate-500 mb-4 font-semibold italic">Kaas Wild Flower Valley, Ajanta Caves & Deccan Heritage</p>
+              <div class="flex items-center gap-2 bg-brand-50 px-3 py-2 rounded-xl text-xs font-extrabold text-brand-800 mb-4 border border-brand-100">
+                <i class="fa-solid fa-clock text-brand-500"></i> Duration: 4 Nights / 5 Days
+              </div>
+              <ul class="text-xs text-slate-650 space-y-2 mb-6 font-medium">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> 3-Star Premium Family Cozy Stay</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Luxury AC Sedan Hire with Local Driver</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Guided Monument Entry & Breakfast</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-150 flex items-center justify-between">
+              <div>
+                <p class="text-[10px] text-slate-400 font-extrabold uppercase">All-Inclusive</p>
+                <p class="text-xl font-extrabold text-[#d32f2f] font-display">₹12,499<span class="text-xs text-slate-500 font-normal"> / Person</span></p>
+              </div>
+              <button onclick="openBookingModal('pkg-heritage', 'Deccan Flora & Caves Tour', '12,499')" class="px-5 py-2.5 bg-gradient-to-r from-brand-500 to-orange-600 hover:from-brand-600 hover:to-orange-700 text-white text-xs font-extrabold uppercase tracking-wider rounded-xl transition-custom hover:shadow-md cursor-pointer">Secure Spot</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package Card 2 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border-2 border-primary-100 hover:border-brand-500 flex flex-col h-full card-zoom transition-custom">
+          <div class="relative h-56 overflow-hidden bg-slate-100">
+            <span class="absolute top-4 left-4 z-10 text-[10px] font-extrabold uppercase tracking-widest text-slate-950 bg-primary-500 px-3 py-1.5 rounded-md shadow">Beach Getaway</span>
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover card-img transition-all duration-500" alt="Konkan beachfront Tour">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white text-left">
+              <p class="text-[10px] tracking-widest uppercase font-extrabold text-primary-300"><i class="fa-solid fa-location-dot"></i> Konkan Coastline</p>
+              <h3 class="text-lg font-extrabold font-display text-white">Konkan Coastal Paradise</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between text-left">
+            <div>
+              <p class="text-xs text-slate-500 mb-4 font-semibold italic">Beach Sunsets, Fort Exploring & Malvan Watersports</p>
+              <div class="flex items-center gap-2 bg-primary-50 px-3 py-2 rounded-xl text-xs font-extrabold text-primary-800 mb-4 border border-primary-100">
+                <i class="fa-solid fa-clock text-primary-500"></i> Duration: 3 Nights / 4 Days
+              </div>
+              <ul class="text-xs text-slate-650 space-y-2 mb-6 font-medium">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Ocean View Deluxe Cottage Booking</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Parasailing, Scuba & Jet Ski Package</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Premium Coastal Buffets & Refreshments</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-150 flex items-center justify-between">
+              <div>
+                <p class="text-[10px] text-slate-400 font-extrabold uppercase">All-Inclusive</p>
+                <p class="text-xl font-extrabold text-[#d32f2f] font-display">₹9,999<span class="text-xs text-slate-500 font-normal"> / Person</span></p>
+              </div>
+              <button onclick="openBookingModal('pkg-coastal', 'Konkan Coastal Paradise', '9,999')" class="px-5 py-2.5 bg-gradient-to-r from-primary-600 to-brand-500 hover:from-primary-700 hover:to-brand-600 text-white text-xs font-extrabold uppercase tracking-wider rounded-xl transition-custom hover:shadow-md cursor-pointer">Secure Spot</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Package Card 3 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl border-2 border-yellow-100 hover:border-yellow-500 flex flex-col h-full card-zoom transition-custom">
+          <div class="relative h-56 overflow-hidden bg-slate-100">
+            <span class="absolute top-4 left-4 z-10 text-[10px] font-extrabold uppercase tracking-widest text-slate-950 bg-yellow-500 px-3 py-1.5 rounded-md shadow">Misty Hills</span>
+            <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover card-img transition-all duration-500" alt="Sahyadri Western Ghats Misty Mahabaleshwar tour">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white text-left">
+              <p class="text-[10px] tracking-widest uppercase font-extrabold text-yellow-300"><i class="fa-solid fa-location-dot"></i> Western Ghats, MH</p>
+              <h3 class="text-lg font-extrabold font-display text-white">Misty Mahabaleshwar Retreat</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between text-left">
+            <div>
+              <p class="text-xs text-slate-500 mb-4 font-semibold italic">Strawberry Picking, Venna Boat Drives & Mapro Outing</p>
+              <div class="flex items-center gap-2 bg-yellow-50 px-3 py-2 rounded-xl text-xs font-extrabold text-yellow-800 mb-4 border border-yellow-100">
+                <i class="fa-solid fa-clock text-yellow-500"></i> Duration: 2 Nights / 3 Days
+              </div>
+              <ul class="text-xs text-slate-650 space-y-2 mb-6 font-medium">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Valley-facing Premium Deluxe Stay</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Strawberry Farms Tour with Free Samples</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brand-500"></i> Scenic Boating Coupons & Mapro Outing</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-150 flex items-center justify-between">
+              <div>
+                <p class="text-[10px] text-slate-400 font-extrabold uppercase">All-Inclusive</p>
+                <p class="text-xl font-extrabold text-[#d32f2f] font-display">₹7,499<span class="text-xs text-slate-500 font-normal"> / Person</span></p>
+              </div>
+              <button onclick="openBookingModal('pkg-hills', 'Misty Mahabaleshwar Retreat', '7,499')" class="px-5 py-2.5 bg-gradient-to-r from-yellow-500 to-brand-500 hover:from-yellow-600 hover:to-brand-600 text-slate-950 hover:text-white text-xs font-extrabold uppercase tracking-wider rounded-xl transition-custom hover:shadow-md cursor-pointer">Secure Spot</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== ABOUT US SECTION ==================== -->
+  <section id="about" class="py-24 px-4 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-left">
+        
+        <!-- Collages Left -->
+        <div class="relative py-4">
+          <div class="absolute -top-3 -left-3 w-full h-full border-4 border-brand-500/40 rounded-3xl translate-x-4 translate-y-4 -z-10"></div>
+          <div class="rounded-3xl overflow-hidden shadow-2xl relative">
+            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=1200&auto=format&fit=crop" class="w-full h-96 sm:h-[480px] object-cover" alt="Family traveling joyfully">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-900/90 to-transparent"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 blur-glass border-2 border-brand-200 p-5 rounded-2xl flex items-center gap-4">
+              <div class="h-12 w-12 rounded-xl bg-gradient-to-tr from-brand-500 to-primary-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div>
+                <p class="text-[10px] text-brand-650 uppercase tracking-widest font-extrabold">Absolute Reliability</p>
+                <p class="text-sm font-extrabold text-[#000033]">Highly safe dispatches & transparent flat pricing models.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Details Right -->
+        <div class="lg:pl-6">
+          <span class="text-xs font-extrabold uppercase tracking-[0.25em] text-white bg-gradient-to-r from-brand-500 to-primary-500 px-4 py-1.5 rounded-full inline-block mb-3 font-display">Heritage Legacy</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight mb-6">
+            Shree Gajanan Travels — Bhiwandi's First Choice
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-medium">
+            Founded with the sole intention of serving citizens, families and businesses of Bhiwandi with immaculate travel logistics, we maintain a spotless fleet of vehicles. 
+          </p>
+          <p class="text-slate-650 text-sm sm:text-base leading-relaxed mb-6 font-medium">
+            Every room reservation and driver dispatch is closely supervised by our localized office teams, backing up your vacation with 24 Hours human assistance.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t-2 border-brand-100">
+            <div>
+              <p class="text-3xl font-extrabold font-display text-brand-500">20+</p>
+              <p class="text-[10px] uppercase font-extrabold text-slate-500">Regular Vehicles</p>
+            </div>
+            <div>
+              <p class="text-3xl font-extrabold font-display text-brand-500">5,000+</p>
+              <p class="text-[10px] uppercase font-extrabold text-slate-500">Happy Couples</p>
+            </div>
+            <div>
+              <p class="text-3xl font-extrabold font-display text-brand-500">24/7</p>
+              <p class="text-[10px] uppercase font-extrabold text-slate-500">Live Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== TESTIMONIALS SECTION ==================== -->
+  <section id="reviews" class="py-24 px-4 bg-gradient-to-tr from-orange-100/30 via-slate-50 to-primary-50/30">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-[0.25em] text-white bg-gradient-to-r from-brand-500 to-primary-500 px-4 py-1.5 rounded-full inline-block mb-3 font-display">True Feedbacks</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight mb-4">
+          Thousands of Happy Tour Experiences
+        </h2>
+        <p class="text-slate-600 font-medium leading-relaxed">
+          See what our regular corporate traveler managers and families say about regional fleet comfort, driver conduct, and hospitality.
+        </p>
+      </div>
+
+      <!-- Testimonial Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+        <!-- Review 1 -->
+        <div class="bg-white p-6 rounded-3xl border-2 border-brand-100/60 shadow-sm flex flex-col justify-between hover:border-brand-500 hover:shadow-xl transition-custom">
+          <div>
+            <div class="flex text-brand-500 gap-1 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed mb-6 font-medium">
+              "We consistently rely on Shree Gajanan vehicles for corporate warehouse staff commutes because their timing is immaculate and localized dispatch is ultra responsive!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="h-10 w-10 bg-slate-200 rounded-full overflow-hidden border border-brand-500">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop" class="w-full h-full object-cover" alt="Pooja Sharma">
+            </div>
+            <div>
+              <p class="text-xs font-extrabold text-slate-900">Pooja Sharma</p>
+              <p class="text-[9px] text-brand-600 uppercase tracking-widest font-extrabold">HR Manager, Bhiwandi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-6 rounded-3xl border-2 border-yellow-100 flex flex-col justify-between hover:border-yellow-500 hover:shadow-xl transition-custom">
+          <div>
+            <div class="flex text-yellow-500 gap-1 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed mb-6 font-medium">
+              "Outstanding Konkan honeymoon package organized by Shree Gajanan team. Our resort suite was directly overlooking the seawaves, and we stayed in absolute comfort."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="h-10 w-10 bg-slate-200 rounded-full overflow-hidden border border-yellow-55">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" class="w-full h-full object-cover" alt="Rohit Patel">
+            </div>
+            <div>
+              <p class="text-xs font-extrabold text-slate-900">Rohit & Priya Patel</p>
+              <p class="text-[9px] text-brand-600 uppercase tracking-widest font-extrabold">Couple Honeymooners</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-6 rounded-3xl border-2 border-primary-100 flex flex-col justify-between hover:border-primary-500 hover:shadow-xl transition-custom">
+          <div>
+            <div class="flex text-primary-500 gap-1 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed mb-6 font-medium">
+              "We booked an AC luxury bus for our regional family pilgrimage. The seating was very tidy, driver knew every temple shortcut lane, and auspicious music played so beautifully!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="h-10 w-10 bg-slate-200 rounded-full overflow-hidden border border-primary-500">
+              <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=150&auto=format&fit=crop" class="w-full h-full object-cover" alt="Ajay Shinde">
+            </div>
+            <div>
+              <p class="text-xs font-extrabold text-slate-900">Ajay Shinde</p>
+              <p class="text-[9px] text-primary-600 uppercase tracking-widest font-extrabold">Family Lead</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== LOCATION & INTERACTIVE MAP ==================== -->
+  <section id="location" class="py-24 px-4 bg-white relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch text-left">
+        
+        <!-- Left details Area -->
+        <div class="lg:col-span-5 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-[0.25em] text-white bg-gradient-to-r from-brand-500 to-primary-500 px-4 py-1.5 rounded-full inline-block mb-3 font-display">Bhiwandi Office</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 tracking-tight mb-6">
+              Drop by Our Central Travel Hub
+            </h2>
+            <p class="text-slate-650 text-sm leading-relaxed font-semibold mb-8">
+              Our main booking desk is situated adjacent to the primary transit routes of Bhiwandi, giving us fast routes to dispatch sanitized car fleet and local bus duties immediately.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="h-12 w-12 rounded-xl bg-orange-100 border-2 border-brand-300 text-brand-600 flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-map-location text-lg"></i></div>
+                <div>
+                  <h4 class="text-xs font-extrabold text-brand-600 uppercase">Office Location Address</h4>
+                  <p class="text-slate-800 text-sm font-extrabold mt-1">Shop No. 4, Ground Floor, Gajanan Heritage, Kalyan Road, Opp. Sai Baba Temple, Bhiwandi, Maharashtra - 421302</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="h-12 w-12 rounded-xl bg-orange-100 border-2 border-brand-300 text-brand-600 flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-headset text-lg"></i></div>
+                <div>
+                  <h4 class="text-xs font-extrabold text-brand-700 uppercase">Active Hours</h4>
+                  <p class="text-slate-800 text-sm font-extrabold mt-1">24 Hours / 7 Days Live Phone Reservation Support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Handles -->
+          <div class="mt-8 pt-8 border-t-2 border-brand-100">
+            <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-4">Connect on Official Handles</h4>
+            <div class="flex gap-3">
+              <a href="#" class="h-12 w-12 rounded-xl bg-primary-100 border border-primary-200 text-primary-600 hover:bg-primary-500 hover:text-white flex items-center justify-center transition-custom shadow-sm"><i class="fa-brands fa-facebook text-xl"></i></a>
+              <a href="https://wa.me/918983000000" class="h-12 w-12 rounded-xl bg-emerald-100 border border-emerald-200 text-emerald-600 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition-custom shadow-sm"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+              <a href="#" class="h-12 w-12 rounded-xl bg-yellow-100 border border-yellow-200 text-yellow-700 hover:bg-yellow-500 hover:text-slate-950 flex items-center justify-center transition-custom shadow-sm"><i class="fa-brands fa-instagram text-xl"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Iframe Map Card -->
+        <div class="lg:col-span-7">
+          <div class="h-full bg-slate-50 border-2 border-brand-200 rounded-3xl overflow-hidden shadow-lg flex flex-col min-h-[380px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.2536767355225!2d73.02324900000001!3d19.2930605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bd239b61dbd3%3A0xe54cb8d313be2b3a!2sKalyan%20-%20Bhiwandi%20Rd%2C%20Bhiwandi%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1717900000000!5m2!1sen!2sin" 
+              class="w-full flex-grow border-none min-h-[320px]" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="p-4 bg-gradient-to-r from-brand-500 to-primary-500 text-white flex items-center justify-between text-xs">
+              <span class="font-extrabold"><i class="fa-solid fa-map-pin mr-1 text-white"></i> Bhiwandi Office Base Active</span>
+              <a href="https://maps.google.com/?q=Gajanan+Heritage+Kalyan+Road+Bhiwandi" target="_blank" class="hover:underline font-extrabold text-white flex items-center gap-1">Open in Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== REGULAR CONTACT FORM ==================== -->
+  <section id="contact" class="py-24 px-4 bg-primary-900 text-white relative overflow-hidden">
+    <!-- Overlay graphic blob -->
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-primary-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10 text-left">
+      
+      <div class="bg-gradient-to-br from-primary-900 via-primary-950 to-charcoal-950 border-2 border-brand-500/30 rounded-[2.5rem] overflow-hidden shadow-2xl max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <!-- CTA side -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-brand-600 to-brand-900 p-8 sm:p-12 flex flex-col justify-between">
+            <div>
+              <span class="px-4 py-1.5 text-xs font-bold uppercase rounded-full bg-white/20 mb-6 inline-block">Consult Free</span>
+              <h3 class="text-3xl font-display font-extrabold leading-tight mb-4 text-white">Request a Tailored Travel Quote</h3>
+              <p class="text-amber-100 text-xs sm:text-sm font-medium leading-relaxed mb-6">
+                Fill this quick booking inquiry form. Our executive regional coordinator will call you back within 35 minutes to configure hotel rooms and sanitized rental services. No paperwork required!
+              </p>
+            </div>
+
+            <div class="space-y-4 font-semibold text-xs text-white">
+              <p class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-yellow-300"></i> Flat Rate Pricing & No consulting fees</p>
+              <p class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-yellow-300"></i> Pure Vegetarian & Family-safe hotels</p>
+              <p class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-yellow-300"></i> Sanitized deluxe cars & pushback coaches</p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/20 flex items-center gap-3">
+              <i class="fa-solid fa-phone-volume text-brand-100 text-2xl animate-bounce"></i>
+              <div>
+                <p class="text-[9px] uppercase tracking-wider text-brand-200 font-extrabold">Instant Phone Support</p>
+                <a href="tel:918983000000" class="font-extrabold text-base hover:underline text-white">8983X-XXXXX</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Fields Form with Vibrant Borders -->
+          <div class="lg:col-span-7 p-8 sm:p-12 text-slate-100">
+            <form id="contact-submission-form" onsubmit="submitContactForm(event)" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-brand-300 mb-1">Your Full Name <span class="text-red-500">*</span></label>
+                  <input type="text" id="form-name" required placeholder="John Doe" class="w-full bg-primary-950 border-2 border-brand-500/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 text-white placeholder-slate-500 font-medium">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-brand-300 mb-1">Email Address</label>
+                  <input type="email" id="form-email" placeholder="john@example.com" class="w-full bg-primary-950 border-2 border-brand-500/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 text-white placeholder-slate-500 font-medium">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-brand-300 mb-1">Mobile Contact <span class="text-red-500">*</span></label>
+                  <input type="tel" id="form-phone" required placeholder="8983XXXXXX" class="w-full bg-primary-950 border-2 border-brand-500/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 text-white placeholder-slate-500 font-medium">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-brand-300 mb-1">Travel Service Category</label>
+                  <select id="form-interest" class="w-full bg-primary-950 border-2 border-brand-500/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 text-white cursor-pointer font-medium appearance-none">
+                    <option value="Honeymoon & Couples">Honeymooms / Couples Trips</option>
+                    <option value="Family Holidays">Family Tour Packages</option>
+                    <option value="Fleet Hire">Fleet Rentals (Car & Bus)</option>
+                    <option value="Corporate Local Bus Duty">Corporate Local Bus Duty</option>
+                    <option value="Hotels & Stays">Hotel Stays Booking</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-brand-300 mb-1">Your Travel Requirements</label>
+                <textarea id="form-message" rows="3" placeholder="Expected number of passengers, dates, package destination interest..." class="w-full bg-primary-950 border-2 border-brand-500/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-500 text-white placeholder-slate-400 resize-none font-medium"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-500 to-primary-500 hover:from-brand-600 hover:to-primary-600 text-white font-extrabold uppercase tracking-widest text-xs rounded-xl shadow-lg transition-custom hover:shadow-glow-gold flex items-center justify-center gap-2 cursor-pointer">
+                Send Request <i class="fa-solid fa-paper-plane text-xs"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-gradient-to-br from-primary-900 to-slate-950 text-white py-16 px-4 relative overflow-hidden border-t-2 border-brand-500/30 text-left">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400">
+      
+      <div class="flex items-center gap-2">
+        <div class="h-9 w-9 bg-gradient-to-tr from-brand-500 to-primary-500 text-white rounded-lg flex items-center justify-center shadow shadow-brand-500/20"><i class="fa-solid fa-om text-sm animate-spin" style="animation-duration: 12s"></i></div>
+        <div>
+          <p class="font-extrabold text-white leading-none text-base">Shree Gajanan</p>
+          <p class="text-[9px] uppercase tracking-widest text-[#ffaa00] mt-1 font-extrabold">Tours & Travels</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-center font-medium max-w-md">
+        © 2026 Shree Gajanan Tours and Travels. All rights reserved. Registered proudly in Bhiwandi base, Maharashtra. Blessings of Shree Saint Gajanan Maharaj.
+      </p>
+
+      <div class="flex gap-4 font-extrabold">
+        <a href="#home" class="hover:text-brand-500 transition-colors">Home</a>
+        <a href="#services" class="hover:text-brand-500 transition-colors">Services</a>
+        <a href="#contact" class="hover:text-brand-500 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==================== INTERACTIVE SECURE BOOKING MODAL ==================== -->
+  <div id="booking-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+      <div onclick="closeBookingModal()" class="fixed inset-0 transition-opacity bg-slate-950/80 backdrop-blur-sm"></div>
+      <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+
+      <div class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-3xl shadow-2xl sm:my-8 sm:align-middle sm:max-w-md sm:w-full border-2 border-brand-200">
+        <div class="relative bg-gradient-to-tr from-slate-950 to-primary-950 p-6 text-white text-left">
+          <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-white/70 hover:text-white text-lg focus:outline-none"><i class="fa-solid fa-xmark"></i></button>
+          <span class="text-[10px] font-extrabold text-brand-550 uppercase tracking-widest block mb-1 text-brand-500">Spot Reservation Booking</span>
+          <h3 class="text-base font-extrabold font-display text-white" id="modal-package-title">Ellora Cave Tour</h3>
+          <p class="text-xs text-brand-400 mt-1 font-bold" id="modal-package-pricing">Starting from ₹12,499 / Person</p>
+        </div>
+
+        <form onsubmit="submitSpotBooking(event)" class="p-6 space-y-4">
+          <input type="hidden" id="booking-package-id">
+          <input type="hidden" id="booking-package-name">
+
+          <div>
+            <label class="block text-xs font-extrabold text-brand-600 uppercase tracking-wider mb-1">Your Full Name <span class="text-red-500">*</span></label>
+            <input type="text" id="booking-full-name" required placeholder="Pankaj Patil" class="w-full bg-slate-50 border-2 border-brand-100 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 text-slate-950 placeholder-slate-400 font-extrabold">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-extrabold text-brand-600 uppercase tracking-wider mb-1">Call Phone <span class="text-red-500">*</span></label>
+              <input type="tel" id="booking-contact-phone" required placeholder="8983XXXXXX" class="w-full bg-slate-50 border-2 border-brand-100 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 text-slate-950 placeholder-slate-400 font-extrabold">
+            </div>
+            <div>
+              <label class="block text-xs font-extrabold text-brand-600 uppercase tracking-wider mb-1">Travel Date <span class="text-red-500">*</span></label>
+              <input type="date" id="booking-travel-date" required class="w-full bg-slate-50 border-2 border-brand-100 rounded-xl px-3.5 py-2 text-sm focus:outline-none focus:border-brand-500 text-slate-950 font-extrabold">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-extrabold text-brand-600 uppercase tracking-wider mb-1">Passengers Estimations</label>
+            <select id="booking-passengers" class="w-full bg-slate-50 border-2 border-brand-100 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 text-slate-950 appearance-none font-extrabold">
+              <option value="1">1 Passenger Solo</option>
+              <option value="2">2 Passengers Couples</option>
+              <option value="4">4+ Passengers/Family Group</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-brand-500 to-primary-500 text-white font-extrabold uppercase tracking-wider text-xs rounded-xl shadow-md transition-custom flex items-center justify-center gap-2 cursor-pointer">
+            Confirm Spot Reservation <i class="fa-solid fa-circle-check"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== NOTIFICATION TOAST WIDGET ==================== -->
+  <div id="toast-notif" class="fixed bottom-6 right-6 z-50 hidden transition-all duration-300 transform translate-y-3 opacity-0">
+    <div class="bg-slate-900 border-2 border-brand-400 text-white rounded-2xl p-5 shadow-2xl flex items-start gap-4 max-w-sm blur-glass-dark">
+      <div class="h-10 w-10 rounded-xl bg-brand-500/20 text-brand-400 border border-brand-500/30 flex items-center justify-center shrink-0">
+        <i class="fa-solid fa-om text-lg animate-spin" style="animation-duration: 3s"></i>
+      </div>
+      <div>
+        <p class="font-extrabold text-xs text-yellow-400 uppercase tracking-wider text-left">Auspicious Blessings Set!</p>
+        <p class="text-xs text-slate-100 mt-1.5 leading-relaxed font-semibold text-left" id="toast-msg">Your request is registered successfully.</p>
+        <button onclick="hideToast()" class="text-[10px] uppercase font-extrabold text-brand-300 mt-2 hover:underline block text-left">Dismiss Info Banner</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== FRONTEND CLIENT SCRIPT LOGICS ==================== -->
+  <script>
+    // Header Scroll Glass adjustment
+    window.addEventListener("scroll", () => {
+      const header = document.getElementById("main-header");
+      const navContainer = document.getElementById("navbar-container");
+      const brandName = document.getElementById("brand-name");
+      
+      if (window.scrollY > 40) {
+        if (header) {
+          header.classList.remove("py-4");
+          header.classList.add("py-2");
+        }
+        if (navContainer) {
+          navContainer.classList.remove("blur-glass");
+          navContainer.classList.add("blur-glass-dark", "text-white");
+        }
+        document.querySelectorAll("#navbar-container nav a").forEach(a => {
+          a.classList.remove("text-slate-700");
+          a.classList.add("text-slate-200", "hover:text-brand-400");
+        });
+        if (brandName) {
+          brandName.classList.remove("text-slate-900");
+          brandName.classList.add("text-white");
+        }
+      } else {
+        if (header) {
+          header.classList.remove("py-2");
+          header.classList.add("py-4");
+        }
+        if (navContainer) {
+          navContainer.classList.remove("blur-glass-dark", "text-white");
+          navContainer.classList.add("blur-glass");
+        }
+        document.querySelectorAll("#navbar-container nav a").forEach(a => {
+          a.classList.add("text-slate-700");
+          a.classList.remove("text-slate-200", "hover:text-brand-400");
+        });
+        if (brandName) {
+          brandName.classList.remove("text-white");
+          brandName.classList.add("text-slate-900");
+        }
+      }
+    });
+
+    // Mobile Navbar Drawer toggler
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileDrawer = document.getElementById("mobile-drawer");
+    const menuIcon = document.getElementById("menu-icon");
+
+    if (mobileMenuBtn && mobileDrawer) {
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileDrawer.classList.toggle("hidden");
+        const isOpen = !mobileDrawer.classList.contains("hidden");
+        menuIcon.className = isOpen ? "fa-solid fa-xmark text-xl" : "fa-solid fa-bars text-xl";
+      });
+    }
+
+    // Dismiss drawer on link click
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        if (mobileDrawer) {
+          mobileDrawer.classList.add("hidden");
+          menuIcon.className = "fa-solid fa-bars text-xl";
+        }
+      });
+    });
+
+    // Switch services category tabs
+    function switchCategoryTab(catId) {
+      document.querySelectorAll(".tab-content").forEach(content => {
+        content.classList.add("hidden");
+        content.classList.remove("block");
+      });
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.classList.remove("text-brand-600", "border-brand-500", "bg-brand-100/40", "rounded-t-xl", "shadow-sm");
+        btn.classList.add("text-slate-400", "border-transparent", "hover:text-slate-700");
+      });
+
+      const activeContent = document.getElementById(`tab-content-${catId}`);
+      const activeBtn = document.getElementById(`tab-btn-${catId}`);
+      
+      if (activeContent) {
+        activeContent.classList.remove("hidden");
+        activeContent.classList.add("block");
+      }
+      if (activeBtn) {
+        activeBtn.classList.add("text-brand-600", "border-brand-500", "bg-brand-100/40", "rounded-t-xl", "shadow-sm");
+        activeBtn.classList.remove("text-slate-400", "border-transparent");
+      }
+    }
+
+    // Quick Option Intents
+    function triggerQuickIntention() {
+      const dest = document.getElementById("quick-dest").value;
+      const interest = document.getElementById("quick-interest").value;
+      const travelDate = document.getElementById("quick-date").value;
+
+      let packageName = "";
+      if (dest === "heritage") packageName = "Deccan Caves & Ellora Heritage";
+      else if (dest === "coastal") packageName = "Konkan Beachfront Getaway";
+      else if (dest === "hills") packageName = "Western Ghats Misty Retreat";
+      else packageName = "Custom Specialized Location";
+
+      openBookingModal(dest, packageName, "Best Available rates");
+    }
+
+    // Interactive booking modal control
+    const bookingModal = document.getElementById("booking-modal");
+    
+    function openBookingModal(pkgId, title, price) {
+      const titleSpan = document.getElementById("modal-package-title");
+      const pricingSpan = document.getElementById("modal-package-pricing");
+      const idInput = document.getElementById("booking-package-id");
+      const nameInput = document.getElementById("booking-package-name");
+
+      if (titleSpan) titleSpan.textContent = title;
+      if (pricingSpan) pricingSpan.textContent = `Starting from ₹${price} / Person`;
+      if (idInput) idInput.value = pkgId;
+      if (nameInput) nameInput.value = title;
+
+      if (bookingModal) {
+        bookingModal.classList.remove("hidden");
+      }
+    }
+
+    function closeBookingModal() {
+      if (bookingModal) {
+        bookingModal.classList.add("hidden");
+      }
+    }
+
+    // Submit spot bookings
+    function submitSpotBooking(event) {
+      event.preventDefault();
+      const name = document.getElementById("booking-full-name").value;
+      const phone = document.getElementById("booking-contact-phone").value;
+      const date = document.getElementById("booking-travel-date").value;
+      const pkgName = document.getElementById("booking-package-name").value;
+
+      closeBookingModal();
+      showToast(`Auspicious spot reserved! Thank you, ${name}. Our Bhiwandi dispatch team will coordinate seats for '${pkgName}' on phone registration reference: ${phone} for date: ${date}. Live support set!`);
+    }
+
+    // Contact Form Submitter
+    function submitContactForm(event) {
+      event.preventDefault();
+      const name = document.getElementById("form-name").value;
+      const phone = document.getElementById("form-phone").value;
+      const category = document.getElementById("form-interest").value;
+
+      // Reset Form fields
+      document.getElementById("contact-submission-form").reset();
+      
+      showToast(`Divine Greetings, ${name}! Your regional inquiry request for '${category}' has been booked successfully under Saint Shree Gajanan Blessings. We will call you on ${phone} within 35 minutes!`);
+    }
+
+    // Toast show hide mechanism
+    function showToast(message) {
+      const toast = document.getElementById("toast-notif");
+      const toastMsg = document.getElementById("toast-msg");
+      
+      if (toast && toastMsg) {
+        toastMsg.textContent = message;
+        toast.classList.remove("hidden");
+        
+        setTimeout(() => {
+          toast.classList.remove("translate-y-3", "opacity-0");
+          toast.classList.add("translate-y-0", "opacity-100");
+        }, 10);
+      }
+    }
+
+    function hideToast() {
+      const toast = document.getElementById("toast-notif");
+      if (toast) {
+        toast.classList.add("translate-y-3", "opacity-0");
+        toast.classList.remove("translate-y-0", "opacity-100");
+        setTimeout(() => {
+          toast.classList.add("hidden");
+        }, 300);
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Shree Gajanan Tours and Travels",
+  "description": "Your trusted travel partner for unforgettable tours, luxury car rentals, and seamless journeys base in Bhiwandi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
